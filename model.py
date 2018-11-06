@@ -324,8 +324,8 @@ class DCGAN(object):
               print("[Sample] d_loss: %.8f, g_loss: %.8f" % (d_loss, g_loss)) 
             except Exception as e:
               print("one pic error!...")
-              print e.__doc__
-              print e.message
+              print(e.__doc__)
+              print(e.message)
 
         if np.mod(counter, config.ckpt_freq) == 0:
           self.save(config.checkpoint_dir, counter)
